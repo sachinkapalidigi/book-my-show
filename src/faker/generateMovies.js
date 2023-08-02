@@ -7,7 +7,7 @@ const generateRandomMovie = () => {
   releaseDate.setHours(0, 1, 0, 0);
 
   // Generate an endDate that is after the releaseDate
-  // const endDate = faker.date.between(releaseDate, faker.date.future(1));
+  // const endDate = faker.date.between(releaseDate, faker.date.future(35));
   const endDate = null;
 
   return {

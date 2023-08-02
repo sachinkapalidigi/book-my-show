@@ -18,7 +18,7 @@ const server = http.createServer(app);
 server.listen(PORT, async function () {
   // Connect to database
   await connectToDb();
-  await syncDb();
+  // await syncDb();
 
   console.log(`Server running on port ${PORT}`);
 });
