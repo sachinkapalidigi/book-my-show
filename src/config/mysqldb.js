@@ -8,6 +8,11 @@ const HOST = process.env.DATABASE_HOST || "";
 const sequelize = new Sequelize(DATABASE, USERNAME, PASSWORD, {
   dialect: "mysql",
   host: HOST,
+  pool: {
+    max: 10, // Maximum number of connections in the pool
+    min: 0, // Minimum number of connections in the pool
+    idle: 10000, // Time (in milliseconds) that a connection can be idle before being removed from the pool
+  },
 });
 
 const connectToDb = async function () {

@@ -20,8 +20,10 @@ const generateTheatres = require("../faker/generateTheatres");
     // Create the theatres and their addresses in the database using Sequelize
     await Promise.all(
       theatresData.map(async (theatreData) => {
-        const theatre = await Theatre.create(theatreData, {
-          include: TheatreAddress,
+        const theatre = await Theatre.create(theatreData);
+        const theatreAddress = await TheatreAddress.create({
+          theatreId: theatre.id,
+          ...theatreData.theatreAddress,
         });
         console.log(`Theatre "${theatre.name}" created successfully!`);
       })

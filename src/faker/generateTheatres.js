@@ -35,9 +35,10 @@ const generateTheatres = (count) => {
   for (let i = 0; i < count; i++) {
     const theatre = generateRandomTheatre();
     const theatreAddress = generateRandomTheatreAddress();
-    theatre.TheatreAddress = theatreAddress;
+    theatre.theatreAddress = theatreAddress;
     theatres.push(theatre);
   }
+  console.log(theatres);
   return theatres;
 };
 

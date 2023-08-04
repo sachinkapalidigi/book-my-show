@@ -45,7 +45,7 @@ const TheatreAddress = sequelize.define("theatre_address", {
     type: DataTypes.STRING(100),
     defaultValue: "India",
   },
-  lattitude: {
+  latitude: {
     type: DataTypes.DOUBLE,
   },
   longitude: {
